@@ -56,7 +56,9 @@ def face_detect():
                 cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
                 roi_gray = gray[y : y + h, x : x + w]
                 roi_color = img[y : y + h, x : x + w]
-
+            # img = cv2.Canny(img, 50, 100)
+            # img = cv2.Laplacian(img, cv2.CV_8S)
+            #img = cv2.Sobel(img, cv2.CV_8U, 1, 0, ksize=0)
             cv2.imshow("Face Detect", img)
             keyCode = cv2.waitKey(30) & 0xFF
             # Stop the program on the ESC key
