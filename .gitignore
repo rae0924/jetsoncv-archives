@@ -1,0 +1,4 @@
+haarcascades/
+.vscode/
+venv/
+__pycache__/
